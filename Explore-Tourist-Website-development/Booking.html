@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Booking</title>
+  </head>
+
+  <body>
+    <!-- Header and Nav -->
+    <header>
+      <nav>
+        <div class="main">
+          <ul class="main-list">
+            <li class="main-list-item"><a href="index.html">Home</a></li>
+            <li class="main-list-item">
+              <a href="FamousTouristPlaces.html">Famous Places</a>
+            </li>
+            <li class="main-list-item"><a href="packages.html">packages</a></li>
+            <li class="active main-list-item">
+              <a href="Booking.html">Booking</a>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+      <!-- // Header and Nav -->
+
+      <!-- Title heading -->
+      <div class="title">
+        <span class="heading">Booking Best Places</span>
+      </div>
+    </header>
+    <!-- // Title heading -->
+
+    <!-- Restaurants -->
+    <div class="page-wrapper">
+      <main>
+        <div class="history">
+          <h1 class="history-heading1">
+            Booking Destination Tickets And Hotels.
+          </h1>
+          <hr />
+
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+          <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+          <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+          <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+          <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+          <link href="booking-form.css" rel="stylesheet">
+
+          <script>
+          $( document ).ready(function() {
+          $( function() {
+            var dateToday = new Date();
+            var dates = $("#start-date, #end-date").datepicker({
+              defaultDate: "+2d",
+              changeMonth: true,
+              numberOfMonths: 1,
+              minDate: dateToday,
+              onSelect: function(selectedDate) {
+                  var option = this.id == "start-date" ? "minDate" : "maxDate",
+                  instance = $(this).data("datepicker"),
+                  date = $.datepicker.parseDate(instance.settings.dateFormat || $.datepicker._defaults.dateFormat, selectedDate, instance.settings);
+                  dates.not(this).datepicker("option", option, date);
+              }
+            });
+          });
+          });
+          </script>
+
+          <div>
+          <!-- Static navbar -->
+          <nav class="navbar navbar-default">
+             <div class="container-fluid">
+                <div class="navbar-header">
+                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                   <span class="sr-only">Toggle navigation</span>
+                   <span>Book Now!</span>
+                   </button>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                   <form class="form book-now-form" role="form" id="widget_booking_form" name="widget_booking_form" >
+                      <input id="campaign" type="hidden" value="visitflagler_topNavWidget" name="campaign"> <input id="clone_id" type="hidden" value="278" name="clone_id">
+                      <div class="form-group">
+                         <label for="lodging">Book Your Stay</label>
+                         <select class="form-control" id="lodgingID" name="lodgingID" placeholder="All Lodging">
+                            <option value="103" selected="selected">
+                               All Options
+                            </option>
+                            <option value="50">
+                               Destinstions Tickets
+                            </option>
+                            <option value="9">
+                               Hotels
+                          </option>
+                         </select>
+                      </div>
+                      <!--check in element-->
+                      <div class="form-group">
+                         <label for="check-in">Check In</label> <!-- <input type="textfield" class="form-control" id="check-in" placeholder="12.20.2014"> -->
+                         <input type="text"  class="form-control" id="start-date" name="start-date" placeholder="mm/dd/yyyy">
+                      </div>
+                      <!--check out element-->
+                      <div class="form-group">
+                         <label for="check-out">Check Out</label> <!-- <input type="textfield" class="form-control" id="check-out" placeholder="12.27.2014"> -->
+                         <input type="text" class="form-control" id="end-date" name="end-date" placeholder="mm/dd/yyyy" >
+                      </div>
+                      <!--submit-->
+                      <div class="form-group">
+                         <button name="Submit" href="#" class="btn btn-sm btn-warning">Search</button>
+                      </div>
+                   </form>
+                </div>
+                <!--/.nav-collapse -->
+             </div>
+             <!--/.container-fluid -->
+          </nav>
+          <section class="ct_icon_box_section">
+             <div class="container">
+                <div class="ct-section_header ct-section_header--type2">
+                   <h2>
+                      Booking Form
+                   </h2>
+                   <div class="ct-section_header-description">
+                      Booking Best Places Tickets And Hotels To Stay In India.
+                   </div>
+                   <div class="ct-section_header-separator">
+                      &nbsp;
+                   </div>
+                </div>
+               <div class="row">
+                   <div class="col-md-4 col-sm-6">
+                      <div class="ct-icon_box media">
+                         <div class="media-left">
+                            <i class="fa fa-book" aria-hidden="true"></i>
+                         </div>
+                         <div class="media-body">
+                            <h3 class="media-heading">
+                               DESTINATION TICKETS
+                            </h3>
+                            <div class="ct-icon_box-content">
+                               Get the lowest rates in destination ticket booking!
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-md-4 col-sm-6">
+                      <div class="ct-icon_box media">
+                         <div class="media-left">
+                            <i class="fa fa-building" aria-hidden="true"></i>
+                         </div>
+                         <div class="media-body">
+                            <h3 class="media-heading">
+                               NEAR BY HOTELS
+                            </h3>
+                            <div class="ct-icon_box-content">
+                               Find the best hotels for the best price!
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                   </div>
+             </div>
+          </section>
+
+        </div>
+        </div>
+        <footer>
+          <div class="footer">
+            <div class="footer-content">
+              <div class="footer-section about">
+                <h1 class="logo-text">
+                  <span class="logo-span">Y</span>ash
+                  <span class="logo-span">S</span>harma
+                </h1>
+                <p class="footer-para">
+                  I am a creative, Web Developer with command on Latest Tech stacks
+                </p>
+                <div class="contact">
+                  <span><i class="fas fa-phone"></i>&nbsp; 8698089868</span>
+                  <span
+                    ><i class="fas fa-envelope"></i>&nbsp;
+                    yash.sharma22002@gmail.com</span
+                  >
+                </div>
+                <div class="socials">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100041078220896"
+                    target="_blank"
+                    ><i class="fab fa-facebook"></i
+                  ></a>
+                  <a
+                    href="https://www.linkedin.com/in/junaid-qureshi-34a180194/"
+                    target="_blank"
+                    ><i class="fab fa-linkedin"></i
+                  ></a>
+                  <a href="https://twitter.com/Junaid084869/" target="_blank"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a href="https://github.com/qjunaid623/" target="_blank"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              &copy; | Designed By yash sharma
+            </div>
+          </div>
+        </footer>
+        <!-- // Footer -->
+      </body>
+    </html>
